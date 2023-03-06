@@ -3,5 +3,6 @@ if status is-interactive
   alias cat="bat --style=auto --plain"
   alias vim="nvim"
   source /opt/asdf-vm/asdf.fish
-  export EDITOR=vim
+  export EDITOR=/usr/sbin/nvim
+  alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
 end
