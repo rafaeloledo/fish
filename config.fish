@@ -6,4 +6,5 @@ if status is-interactive
   export EDITOR=/usr/sbin/nvim
   alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
   export PATH="/home/rgnh55/anaconda3/bin:/home/rgnh55/.local/bin:$PATH"
+  export PAGER="most"
 end
