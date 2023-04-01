@@ -1,3 +1,5 @@
+set fish_greeting ""
+
 if status is-interactive
   alias ll="exa --icons -la"
   alias cat="bat --style=auto --plain"
