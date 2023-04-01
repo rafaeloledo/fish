@@ -7,8 +7,8 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
-
 if status is-interactive
+  alias g git
   alias ll="exa --icons -la"
   alias cat="bat --style=auto --plain"
   alias vim="nvim"
