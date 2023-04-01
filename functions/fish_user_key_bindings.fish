@@ -5,4 +5,8 @@ function fish_user_key_bindings
   bind \e\[3\;5~ kill-bigword
   # ctrl-alt-d
   bind \e\cD kill-whole-line 
+  # ctrl-d
+  bind \cd delete-char
+  # ctrl-g
+  bind \cg 'git diff; commandline -f repaint'
 end
