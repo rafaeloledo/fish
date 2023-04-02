@@ -8,5 +8,7 @@ function fish_user_key_bindings
   # ctrl-d
   bind \cd delete-char
   # ctrl-g
-  bind \cg 'git diff; commandline -f repaint' 
+  bind \cg 'git diff; commandline -f repaint'
+  # ctrl-s
+  bind \cS 'git status; commandline -f repaint'
 end
