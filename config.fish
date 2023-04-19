@@ -18,6 +18,7 @@ end
 if test $WSL_DISTRO_NAME = "Ubuntu"
   source ~/.asdf/asdf.fish
   alias cat="batcat --style=auto --plain"
+  alias brave="brave-browser"
 else
   alias cat="bat --style=auto --plain"
   source /opt/asdf-vm/asdf.fish
