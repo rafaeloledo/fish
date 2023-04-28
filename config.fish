@@ -21,7 +21,7 @@ if test $WSL_DISTRO_NAME = "Ubuntu"
   alias brave="brave-browser"
   alias upall="sudo apt update -y && sudo apt upgrade -y"
 else
-  alias upall="sudo pacman -Syu"
+  alias upall="sudo pacman -Syu --noconfirm"
   alias cat="bat --style=auto --plain"
   source /opt/asdf-vm/asdf.fish
   export EDITOR=/usr/sbin/nvim
