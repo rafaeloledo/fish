@@ -19,7 +19,7 @@ if test $WSL_DISTRO_NAME = "Ubuntu"
   source ~/.asdf/asdf.fish
   alias cat="batcat --style=auto --plain"
   alias brave="brave-browser"
-  alias upall="sudo apt update && sudo apt upgrade"
+  alias upall="sudo apt update -y && sudo apt upgrade -y"
 else
   alias upall="sudo pacman -Syu"
   alias cat="bat --style=auto --plain"
