@@ -20,6 +20,7 @@ if test $WSL_DISTRO_NAME = "Ubuntu"
   alias cat="batcat --style=auto --plain"
   alias brave="brave-browser"
   alias upall="sudo apt update -y && sudo apt upgrade -y"
+  alias pgadmin4="/usr/pgadmin4/bin/pgadmin4"
 else
   alias upall="sudo pacman -Syu --noconfirm"
   alias cat="bat --style=auto --plain"
