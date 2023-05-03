@@ -6,9 +6,7 @@ function fish_user_key_bindings
   # ctrl-alt-d
   bind \e\cD kill-whole-line 
   # ctrl-d
-  bind \cd delete-char
-  # ctrl-g
-  bind \cg 'git diff; commandline -f repaint'
+  bind \cd 'git diff; commandline -f repaint'
   # ctrl-s
   bind \cS 'git status; commandline -f repaint'
 end
