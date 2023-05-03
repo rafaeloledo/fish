@@ -7,14 +7,16 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
-if status is-interactive
-  alias g git
-  alias ll="exa --icons -la"
-  alias vim="nvim"
-  alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
-  export PATH="/home/rgnh55/anaconda3/bin:/home/rgnh55/.local/bin:$PATH"
-  source ~/.config/fish/functions/upgraded_cd.fish
-end
+alias g git
+alias ll="exa --icons -la"
+alias vim="nvim"
+alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
+alias distro="echo $WSL_DISTRO_NAME"
+
+export PATH="/home/rgnh55/anaconda3/bin:/home/rgnh55/.local/bin:$PATH"
+
+source ~/.config/fish/functions/upgraded_cd.fish
+
 
 if test $WSL_DISTRO_NAME = "Ubuntu"
   source ~/.asdf/asdf.fish
