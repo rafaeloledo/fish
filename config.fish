@@ -13,6 +13,7 @@ if status is-interactive
   alias vim="nvim"
   alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
   export PATH="/home/rgnh55/anaconda3/bin:/home/rgnh55/.local/bin:$PATH"
+  source ~/.config/fish/functions/upgraded_cd.fish
 end
 
 if test $WSL_DISTRO_NAME = "Ubuntu"
