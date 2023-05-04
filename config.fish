@@ -8,7 +8,7 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 alias g git
-alias ll="exa --icons -la"
+alias ll="exa --icons -laF"
 alias vim="nvim"
 alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
 alias distro="echo $WSL_DISTRO_NAME"
@@ -24,7 +24,7 @@ if test $WSL_DISTRO_NAME = "Ubuntu"
   alias brave="brave-browser"
   alias upall="sudo apt update -y && sudo apt upgrade -y"
   alias pgadmin4="/usr/pgadmin4/bin/pgadmin4"
-else
+else if test $WSL_DISTRO_NAME = "Arch"
   alias upall="sudo pacman -Syu --noconfirm"
   alias cat="bat --style=auto --plain"
   source /opt/asdf-vm/asdf.fish
