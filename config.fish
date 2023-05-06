@@ -7,7 +7,7 @@ set -g theme_display_user yes
 set -g theme_hide_hostname no
 set -g theme_hostname always
 
-# my env variables
+# my env variables - uncomment depending on the current distro
 set -gx DISTRO UBUNTU
 # set -gx DISTRO ARCH
 
