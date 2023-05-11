@@ -8,8 +8,8 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # my env variables - uncomment depending on the current distro
-set -Ux DISTRO UBUNTU
-# set -Ux DISTRO ARCH
+# set -Ux DISTRO UBUNTU
+set -Ux DISTRO ARCH
 
 alias g git
 alias ll="exa --icons -laF"
@@ -31,7 +31,7 @@ if test $DISTRO = "UBUNTU"
 else if test $DISTRO = "ARCH"
   alias upall="sudo pacman -Syu --noconfirm"
   alias cat="bat --style=auto --plain"
-  source /opt/asdf-vm/asdf.fish
+  source /opt/asdf-vm/asdf.fish 2> /dev/null
   export EDITOR=/usr/sbin/nvim
   export PATH="/usr/lib/jvm/default/bin:$PATH"
   export JAVA_HOME="/usr/lib/jvm/default"
