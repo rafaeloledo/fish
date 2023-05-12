@@ -30,7 +30,6 @@ command -qv bat && alias cat "bat --style=auto --plain"
 command -qv batcat && alias cat "batcat --style=auto --plain"
 command -qv apt && alias upall "sudo apt update -y && sudo apt upgrade -y"
 command -qv pacman && alias upall "sudo pacman -Syu --noconfirm"
-command -qv xdg-open && alias open "xdg-open"
 
 alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
 alias distro="echo DISTRO"
