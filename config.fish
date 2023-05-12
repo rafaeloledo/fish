@@ -10,6 +10,7 @@ set -g theme_hostname always
 # my env variables - uncomment depending on the current distro
 # set -Ux DISTRO UBUNTU
 set -Ux DISTRO ARCH
+set -gx TMUX_CONFIG "$HOME/.config/tmux/tmux.conf"
 
 alias g git
 alias ll="exa --icons -laF"
