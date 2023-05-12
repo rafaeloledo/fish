@@ -26,24 +26,25 @@ if type -q exa
 end
 
 command -qv nvim && alias vim nvim
-
 command -qv bat && alias cat "bat --style=auto --plain"
 command -qv batcat && alias cat "batcat --style=auto --plain"
-
 command -qv apt && alias upall "sudo apt update -y && sudo apt upgrade -y"
 command -qv pacman && alias upall "sudo pacman -Syu --noconfirm"
+command -qv xdg-open && alias open "xdg-open"
 
 alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
 alias distro="echo DISTRO"
 alias cls="clear"
 
-set -gx PATH bin $PATH
-set -gx PATH ~/bin $PATH
-set -gx ~/.local/bin $PATH
+# exporting PATHs
+set -gx PATH bin $PATH 2> /dev/null
+set -gx PATH ~/bin $PATH 2> /dev/null
+set -gx ~/.local/bin $PATH 2> /dev/null
 
 source ~/.config/fish/functions/upgraded_cd.fish
 source ~/scripts/fish/gdrive.fish 2> /dev/null
 
+# distro-strict related
 if test $DISTRO = "UBUNTU"
   source ~/.asdf/asdf.fish 2> /dev/null
 else if test $DISTRO = "ARCH"
@@ -52,3 +53,8 @@ else if test $DISTRO = "ARCH"
   export JAVA_HOME="/usr/lib/jvm/default"
   export JDTLS_HOME="/usr/share/java/jdtls"
 end
+
+# ensure installed
+
+#command -qv wl-copy || echo "No Wayland clipboard"
+#command -qv xsel || echo "No X11 clipboard"
