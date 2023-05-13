@@ -1,19 +1,16 @@
 set fish_greeting ""
 
 # options
-
 set fish_user_automatic_suggestion_verbose 1
 
 # theme
-# set -g theme_color_scheme terminal-dark
-# set -g fish_prompt_pwd_dir_length 1
-# set -g theme_display_user yes
-# set -g theme_hide_hostname no
-# set -g theme_hostname always
+set -g theme_color_scheme terminal-dark
+set -g fish_prompt_pwd_dir_length 1
+set -g theme_display_user yes
+set -g theme_hide_hostname no
+set -g theme_hostname always
 
 # my env variables
-set -Ux DISTRO (grep "^NAME=" /etc/os-release | cut -d = -f2 | tr -d '"')
-set -gx TMUX_CONFIG "$HOME/.config/tmux/tmux.conf"
 set -gx EDITOR nvim
 
 # aliases
@@ -22,6 +19,7 @@ alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
 alias lla "ll -A"
+alias cls="clear"
 
 if type -q exa
   alias ll "exa -l -g --icons"
@@ -29,34 +27,13 @@ if type -q exa
 end
 
 command -qv nvim && alias vim nvim
-command -qv bat && alias cat "bat --style=auto --plain"
-command -qv batcat && alias cat "batcat --style=auto --plain"
-command -qv apt && alias upall "sudo apt update -y && sudo apt upgrade -y"
-command -qv pacman && alias upall "sudo pacman -Syu --noconfirm"
-
-alias ccache="sync; echo 3 > /proc/sys/vm/drop_caches"
-alias distro="echo DISTRO"
-alias cls="clear"
 
 # exporting PATHs
 set -gx PATH bin $PATH 2> /dev/null
 set -gx PATH ~/bin $PATH 2> /dev/null
 set -gx ~/.local/bin $PATH 2> /dev/null
 
-source ~/.config/fish/functions/upgraded_cd.fish
-source ~/scripts/fish/gdrive.fish 2> /dev/null
-
-# distro-strict related
-if test $DISTRO = "Ubuntu"
-  source ~/.asdf/asdf.fish 2> /dev/null
-else if test $DISTRO = "Arch Linux"
-  source /opt/asdf-vm/asdf.fish 2> /dev/null
-  export PATH="/usr/lib/jvm/default/bin:$PATH"
-  export JAVA_HOME="/usr/lib/jvm/default"
-  export JDTLS_HOME="/usr/share/java/jdtls"
+set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
+if test -f $LOCAL_CONFIG
+  source $LOCAL_CONFIG
 end
-
-# ensure installed
-
-#command -qv wl-copy || echo "No Wayland clipboard"
-#command -qv xsel || echo "No X11 clipboard"
