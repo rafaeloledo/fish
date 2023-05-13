@@ -1,5 +1,9 @@
 set fish_greeting ""
 
+# options
+
+set fish_user_automatic_suggestion_verbose 1
+
 # theme
 # set -g theme_color_scheme terminal-dark
 # set -g fish_prompt_pwd_dir_length 1
@@ -7,9 +11,8 @@ set fish_greeting ""
 # set -g theme_hide_hostname no
 # set -g theme_hostname always
 
-# my env variables - uncomment depending on the current distro
-# set -Ux DISTRO UBUNTU
-set -Ux DISTRO ARCH
+# my env variables
+set -Ux DISTRO (grep "^NAME=" /etc/os-release | cut -d = -f2 | tr -d '"')
 set -gx TMUX_CONFIG "$HOME/.config/tmux/tmux.conf"
 set -gx EDITOR nvim
 
@@ -44,9 +47,9 @@ source ~/.config/fish/functions/upgraded_cd.fish
 source ~/scripts/fish/gdrive.fish 2> /dev/null
 
 # distro-strict related
-if test $DISTRO = "UBUNTU"
+if test $DISTRO = "Ubuntu"
   source ~/.asdf/asdf.fish 2> /dev/null
-else if test $DISTRO = "ARCH"
+else if test $DISTRO = "Arch Linux"
   source /opt/asdf-vm/asdf.fish 2> /dev/null
   export PATH="/usr/lib/jvm/default/bin:$PATH"
   export JAVA_HOME="/usr/lib/jvm/default"
