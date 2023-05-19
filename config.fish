@@ -32,6 +32,7 @@ command -qv nvim && alias vim nvim
 set -gx PATH bin $PATH 2> /dev/null
 set -gx PATH ~/bin $PATH 2> /dev/null
 set -gx ~/.local/bin $PATH 2> /dev/null
+set -gx /usr/local/bin $PATH 2> /dev/null
 
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
