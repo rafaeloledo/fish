@@ -10,3 +10,6 @@ __z*
 config-local.fish
 
 z.*
+
+completions/
+fish_plugins
