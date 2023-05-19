@@ -1,1 +1,0 @@
-/home/rgnh55/.asdf/completions/asdf.fish
