@@ -8,3 +8,5 @@ fisher.fish
 __z*
 
 config-local.fish
+
+z.*
