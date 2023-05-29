@@ -31,9 +31,9 @@ command -qv nvim && alias vim nvim
 # exporting PATHs
 set -gx PATH bin $PATH 2> /dev/null
 set -gx PATH ~/bin $PATH 2> /dev/null
-set -gx ~/.local/bin $PATH 2> /dev/null
-set -gx /usr/local/bin $PATH 2> /dev/null
-set -gx ~/.config/emacs/bin $PATH 2> /dev/null
+set -gx PATH ~/.local/bin $PATH 2> /dev/null
+set -gx PATH /usr/local/bin $PATH 2> /dev/null
+set -gx PATH ~/.config/emacs/bin $PATH 2> /dev/null
 
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
