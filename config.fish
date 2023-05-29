@@ -33,8 +33,12 @@ set -gx PATH bin $PATH 2> /dev/null
 set -gx PATH ~/bin $PATH 2> /dev/null
 set -gx ~/.local/bin $PATH 2> /dev/null
 set -gx /usr/local/bin $PATH 2> /dev/null
+set -gx ~/.config/emacs/bin $PATH 2> /dev/null
 
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
 end
+
+# theme
+fish_config theme choose "Rosé Pine"
