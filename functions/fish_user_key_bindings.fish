@@ -6,7 +6,7 @@ function fish_user_key_bindings
   bind \el forward-char
 
   bind \cd delete-char
-
+  bind \cl 'clear; commandline -f repaint'
   # ctrl-backspace
   bind \b backward-kill-word
   # ctrl-delete
