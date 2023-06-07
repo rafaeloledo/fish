@@ -4,7 +4,7 @@ tide*
 
 *prompt.fish
 fisher.fish
-
+!fish_prompt.fish
 __z*
 
 config-local.fish
