@@ -21,6 +21,7 @@ alias ll "ls -l"
 alias lla "ll -A"
 alias llt "ll --tree"
 alias cls="clear"
+alias mscr="cd ~/.local/scripts"
 
 if type -q exa
   alias ll "exa -l -g --icons"
@@ -36,6 +37,7 @@ set -gx PATH ~/.local/bin $PATH 2> /dev/null
 set -gx PATH /usr/local/bin $PATH 2> /dev/null
 set -gx PATH ~/.config/emacs/bin $PATH 2> /dev/null
 set -gx PATH ~/.local/scripts $PATH 2> /dev/null
+
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
   source $LOCAL_CONFIG
