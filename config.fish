@@ -12,6 +12,7 @@ set -g theme_hostname always
 
 # my env variables
 set -gx EDITOR nvim
+set -gx XDG_CONFIG_HOME $HOME/.config
 
 # aliases
 alias g git
@@ -24,7 +25,7 @@ alias cls="clear"
 alias mscr="cd ~/.local/scripts"
 
 if type -q exa
-  alias ll "exa -l -g --icons"
+  alias ll "exa -lg --icons"
   alias lla "ll -a"
 end
 
