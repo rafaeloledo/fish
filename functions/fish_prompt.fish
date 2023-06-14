@@ -5,7 +5,7 @@ function fish_prompt -d "Write out the prompt"
     set dir (prompt_pwd)
     set parts (string split "/" $dir)
     set trunc_dir (string join "" $parts[-1])
-    set fstring (string join " "   $trunc_dir)
+    set fstring (string join " " $trunc_dir)
     printf '%s%s%s 󰁕 '  \
       (set_color $fish_color_cwd) "$fstring" (set_color normal)
 end
