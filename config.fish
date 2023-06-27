@@ -13,6 +13,7 @@ set -g theme_hostname always
 # my env variables
 set -gx EDITOR nvim
 set -gx XDG_CONFIG_HOME $HOME/.config
+set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 
 # aliases
 alias g git
@@ -30,6 +31,7 @@ if type -q exa
 end
 
 command -qv nvim && alias vim nvim
+command -qv starship && starship init fish | source
 
 # exporting PATHs
 set -gx PATH bin $PATH 2> /dev/null
