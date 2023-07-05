@@ -30,6 +30,7 @@ if type -q exa
   alias lla "ll -a"
 end
 
+command -qv neofetch && alias nf neofetch
 command -qv nvim && alias vim nvim
 command -qv starship && starship init fish | source
 
@@ -40,6 +41,7 @@ set -gx PATH ~/.local/bin $PATH 2> /dev/null
 set -gx PATH /usr/local/bin $PATH 2> /dev/null
 set -gx PATH ~/.config/emacs/bin $PATH 2> /dev/null
 set -gx PATH ~/.local/scripts $PATH 2> /dev/null
+set -gx PATH ~/.cargo/bin $PATH 2> /dev/null
 
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
