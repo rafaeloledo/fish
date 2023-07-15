@@ -32,7 +32,7 @@ end
 
 command -qv neofetch && alias nf neofetch
 command -qv nvim && alias vim nvim
-# command -qv starship && starship init fish | source
+#command -qv starship && starship init fish | source
 
 # exporting PATHs
 set -gx PATH bin $PATH 2> /dev/null
