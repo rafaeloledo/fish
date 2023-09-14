@@ -14,6 +14,7 @@ set -g theme_hostname always
 set -gx EDITOR nvim
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
+set -gx ANDROID_HOME $HOME/Android/Sdk
 
 # aliases
 alias g git
@@ -42,6 +43,8 @@ set -gx PATH /usr/local/bin $PATH 2> /dev/null
 set -gx PATH ~/.config/emacs/bin $PATH 2> /dev/null
 set -gx PATH ~/.local/scripts $PATH 2> /dev/null
 set -gx PATH ~/.cargo/bin $PATH 2> /dev/null
+set -gx PATH $ANDROID_HOME/emulator $PATH 2>/dev/null
+set -gx PATH $ANDROID_HOME/platform-tools $PATH 2>/dev/null
 
 set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
