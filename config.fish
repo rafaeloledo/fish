@@ -15,6 +15,7 @@ set -gx EDITOR nvim
 set -gx XDG_CONFIG_HOME $HOME/.config
 set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 set -gx ANDROID_HOME $HOME/Android/Sdk
+set -gx JAVA_HOME /usr/lib/jvm/default 2>/dev/null
 
 # aliases
 alias g git
