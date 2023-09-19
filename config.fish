@@ -17,24 +17,22 @@ set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 set -gx ANDROID_HOME $HOME/Android/Sdk
 set -gx JAVA_HOME /usr/lib/jvm/default 2>/dev/null
 
-# aliases
-alias g git
-alias ls "ls -p -G"
-alias la "ls -A"
-alias ll "ls -l"
-alias lla "ll -A"
-alias llt "ll --tree"
-alias cls="clear"
-alias mscr="cd ~/.local/scripts"
-
-if type -q exa
-  alias ll "exa -lg --icons"
-  alias lla "ll -a"
-end
-
 command -qv neofetch && alias nf neofetch
 command -qv nvim && alias vim nvim
-#command -qv starship && starship init fish | source
+
+# aliases
+alias g git
+alias ll "ls -lA"
+alias llt "ll --tree"
+alias cls "clear"
+
+if type -q exa
+  alias ll "exa -lga --icons"
+end
+
+if type -q bat
+  alias cat "bat -p"
+end
 
 # exporting PATHs
 set -gx PATH bin $PATH 2> /dev/null
