@@ -26,8 +26,8 @@ alias ll "ls -lA"
 alias llt "ll --tree"
 alias cls "clear"
 
-if type -q exa
-  alias ll "exa -lga --icons"
+if type -q eza
+  alias ll "eza -lga --icons"
 end
 
 if type -q bat
