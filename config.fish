@@ -17,14 +17,20 @@ set -gx STARSHIP_CONFIG ~/.config/starship/starship.toml
 set -gx ANDROID_HOME $HOME/Android/Sdk
 set -gx JAVA_HOME /usr/lib/jvm/default 2>/dev/null
 
-command -qv neofetch && alias nf neofetch
-command -qv nvim && alias vim nvim
-
 # aliases
 alias g git
 alias ll "ls -lA"
 alias llt "ll --tree"
 alias cls "clear"
+
+command -qv neofetch && alias nf neofetch
+command -qv nvim && alias v nvim
+
+if type -q tmux
+  alias t tmux
+  alias ta "tmux a"
+  alias td "tmux detach"
+end
 
 if type -q eza
   alias ll "eza -lga --icons"
@@ -35,6 +41,7 @@ if type -q bat
 end
 
 # exporting PATHs
+# set -gx PATH /home/rgnh55/.local/share/nvim/mason/bin $PATH 2>/dev/null
 set -gx PATH bin $PATH 2> /dev/null
 set -gx PATH ~/bin $PATH 2> /dev/null
 set -gx PATH ~/.local/bin $PATH 2> /dev/null
