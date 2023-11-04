@@ -58,4 +58,4 @@ if test -f $LOCAL_CONFIG
 end
 
 # theme
-fish_config theme choose "Rosé Pine" > /dev/null 2> /dev/null
+# fish_config theme choose "Rosé Pine" > /dev/null 2> /dev/null
